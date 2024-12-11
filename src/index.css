@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*** SWIPE LIST OVERRIDES **/
+.swipeable-list-item__leading-actions, 
+.swipeable-list-item__trailing-actions {
+  @apply text-white text-lg uppercase font-bold;
+}
+.swipeable-list-item__leading-actions{
+  @apply bg-gradient-to-b from-cyan-600 to-cyan-400;
+}
+.swipeable-list-item__trailing-actions {
+  @apply bg-gradient-to-b from-rose-600 to-rose-400;
+}
+.swipeable-list .swipe-action {
+  @apply flex justify-center items-center
+}
+
