@@ -27,7 +27,13 @@ export default function ExpenseDetails({ expense }: ExpenseDetailsProps) {
 
   const leadingActions = () => (
     <LeadingActions>
-      <SwipeAction onClick={() => {}}>Actualizar</SwipeAction>
+      <SwipeAction
+        onClick={() =>
+          dispatch({ type: "get-expense-by-id", payload: { id: expense.id } })
+        }
+      >
+        Actualizar
+      </SwipeAction>
     </LeadingActions>
   );
 
@@ -70,7 +76,7 @@ export default function ExpenseDetails({ expense }: ExpenseDetailsProps) {
             </p>
           </div>
 
-          <AmountDisplay amount={expense.amount} />
+          <AmountDisplay amount={Number(expense.amount)} />
         </div>
       </SwipeableListItem>
     </SwipeableList>
